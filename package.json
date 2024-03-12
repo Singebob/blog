@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "prepare": "panda codegen",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -10,8 +11,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.5.2",
     "@astrojs/check": "^0.5.8",
+    "astro": "^4.5.2",
     "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.34.3"
   }
 }
