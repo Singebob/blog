@@ -2,18 +2,9 @@
 import "../../panda.css"
 import { css } from '../../styled-system/css';
 import { circle, hstack, stack, center } from "../../styled-system/patterns";
+import Layout from "../layouts/Layout.astro";
 ---
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Panda CSS test</title>
-	</head>
-	<body>
+<Layout title="Panda">
         <div class={center({'height': '100vh'})}>
             <div class={css({
                 'border': '3px solid #000000',
@@ -40,5 +31,4 @@ import { circle, hstack, stack, center } from "../../styled-system/patterns";
                 </div>
             </div>
         </div>
-	</body>
-</html>
+</Layout>
