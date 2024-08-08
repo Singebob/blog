@@ -20,6 +20,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-## Panda
-styled-system
-styled-system-studio
+# jetbrains setting folder
+.idea/

@@ -1,9 +1,8 @@
 {
-  "name": "vigorous-virgo",
+  "name": "blog",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "prepare": "panda codegen",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -11,11 +10,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.8",
-    "astro": "^4.5.2",
-    "typescript": "^5.4.2"
-  },
-  "devDependencies": {
-    "@pandacss/dev": "^0.34.3"
+    "@astrojs/check": "^0.9.2",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.13.1",
+    "tailwindcss": "^3.4.8",
+    "typescript": "^5.5.4"
   }
 }
