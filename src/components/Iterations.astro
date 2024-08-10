@@ -1,0 +1,13 @@
+---
+interface Props {
+	rules: string[]
+    number: number
+}
+
+const { rules, number } = Astro.props;
+---
+
+<h5>Itérations {number}</h5>
+<ul>
+    {rules.map(rule => (<li>{rule}</li>))}
+</ul>
