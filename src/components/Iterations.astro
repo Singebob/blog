@@ -8,6 +8,13 @@ const { rules, number } = Astro.props;
 ---
 
 <h5>Itérations {number}</h5>
-<ul>
+<ul class="list-disc pl-8">
     {rules.map(rule => (<li>{rule}</li>))}
 </ul>
+
+<style>
+    h5 {
+        @apply text-lg;
+        @apply font-semibold;
+    }
+</style>
