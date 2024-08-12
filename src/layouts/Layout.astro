@@ -17,6 +17,10 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<nav class="flex flex-row gap-4 border-b-4 border-x-4 border-gray-700 p-4 mb-8">
+			<a href="/">Home</a>
+			<a href="/events">Events</a>
+		</nav>
 		<slot />
 	</body>
 </html>
@@ -24,4 +28,16 @@ const { title } = Astro.props;
 	html {
 		font-family: Inter,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
 	}
+	h1 {
+    @apply m-0;
+    @apply text-5xl;
+    @apply font-extrabold;
+	}
+
+	h3 {
+      @apply z-20;
+      @apply m-0;
+      @apply text-xl;
+      @apply font-bold;
+    }
 </style>

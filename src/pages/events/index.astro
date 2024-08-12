@@ -1,0 +1,34 @@
+---
+import Layout from "../../layouts/Layout.astro"
+---
+
+<Layout title="events">
+  <main class="flex flex-col w-6/12 m-auto gap-4">
+    <h1>Events</h1>
+    <a href="/events/shodo13092024">
+    <section class="section">
+      <h3>⛱️ Shodo Summer Code Retreat 2024 ⛩️</h3>
+      <div class="border-l-4 flex flex-col gap-2 pl-4">
+        <p>🗓️ Quand ?</p>
+        <p class="pl-4 text-gray-500">Vendredi 13 Septembre</p>
+        <p>📍Où ?</p>
+        <p class="pl-4 text-gray-500">Au now</p>
+      </div>
+    </section>
+  </a>
+  </main>
+</Layout>
+
+<style>
+  .section {
+        @apply border;
+        @apply rounded-lg;
+        @apply shadow-lg;
+        @apply p-6;
+        @apply flex;
+        @apply flex-col;
+        @apply items-start;
+        @apply gap-4;
+        @apply w-full;
+    }
+</style>
