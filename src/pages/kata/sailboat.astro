@@ -1,0 +1,74 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import DeplacementAligne from "../../images/kata/sailboat/sailboat-kata-examples-déplacement-alignes.png"
+import DeplacementOppose from "../../images/kata/sailboat/sailboat-kata-examples-déplacement-opposes.png"
+import DeplacementOrthogonaux from "../../images/kata/sailboat/sailboat-kata-examples-déplacement-orthogonaux.png"
+import SensHoraire from "../../images/kata/sailboat/sailboat-kata-examples-orientation-sens-horaire.png"
+import SensAntiHoraire from "../../images/kata/sailboat/sailboat-kata-examples-orientation-sens-anti-horaire.png"
+import SensUnSeulQuart from "../../images/kata/sailboat/sailboat-kata-examples-orientation-un-seul-quart.png"
+import SensPlusAvantageuse from "../../images/kata/sailboat/sailboat-kata-examples-orientation-plus-avantageuse.png"
+import SensConservee from "../../images/kata/sailboat/sailboat-kata-examples-orientation-conservée.png"
+---
+
+<Layout title="Sailboat Kata">
+  <main class="flex flex-col gap-4 w-6/12 m-auto">
+    <h1>⛵ Sailboat Kata</h1>
+    <section class="flex flex-col gap-2">
+      <h3>Explication</h3>
+      <p class="text-gray-400 italic">Vous êtes à la barre d'un petit voilier, qui cherche à atteindre une île. Votre bateau se déplace au tour par tour en fonction du vent, lequel change à chaque tour.</p>
+      <p>L'objectif de ce kata est de développer une fonction permettant de calculer la position du bateau à chaque tour.</p>
+    </section>
+    <section>
+      <h3 class="text-gray-500">Déplacement du bateau</h3>
+      <p>On modélise la position du bateau comme une grille à deux dimensions, réputée infinie.</p>
+      <ul class="list-disc pl-8">
+        <li>
+          <p>Si le vent et le bateau sont alignés, alors le bateau avance de 4 cases</p>
+          <Image src={DeplacementAligne} alt="Exemples déplacement alignés" />
+        </li>
+        <li>
+          <p>Si le vent et le bateau sont opposés, alors le bateau avance de 1 case</p>
+          <Image src={DeplacementOppose} alt="Exemples déplacement opposes" />
+        </li>
+        <li>
+          <p>Si le vent et le bateau sont orthogonaux, alors le bateau avance de 2 cases, et se décale d'une case dans le sens du vent</p>
+          <Image src={DeplacementOrthogonaux} alt="Exemples déplacement orthogonaux" />
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3 class="text-gray-500">Navigation</h3>
+      <p>Avant de se laisser pousser par le vent, le navigateur oriente le bateau dans le sens qui lui semble optimum pour atteindre l'île.</p>
+      <ul class="list-disc pl-8">
+        <li>
+          <p>Le bateau peut tourner dans le sens horaire</p>
+          <Image src={SensHoraire} alt="Exemples sens horaire" />
+        </li>
+        <li>
+          <p>Le bateau peut tourner dans le sens anti-horaire</p>
+          <Image src={SensAntiHoraire} alt="Exemples sens anti horaire" />
+        </li>
+        <li>
+          <p>Le bateau ne tourne que d'un seul quart de tour à la fois</p>
+          <Image src={SensUnSeulQuart} alt="Exemples un seul quart de tour" />
+        </li>
+        <li>
+          <p>Le bateau tourne dans la direction la plus avantageuse</p>
+          <Image src={SensPlusAvantageuse} alt="Exemples sens le plus avantageu" />
+        </li>
+        <li>
+          <p>Le bateau peut conserver sa direction</p>
+          <Image src={SensConservee} alt="Exemples sens conservées" />
+        </li>
+      </ul>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main > section:not(:last-child) {
+    @apply pb-4;
+    @apply border-b-2;
+  }
+</style>
