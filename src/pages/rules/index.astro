@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro"
+
+const rules = await Astro.glob("./*.md")
+---
+
+<Layout title="Règle">
+  <h1>Règle</h1>
+  {rules.map(rule => (
+    <a href={rule.url}><h3>{rule.frontmatter.title}</h3></a>
+  ))}
+
+</Layout>

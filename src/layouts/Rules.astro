@@ -2,19 +2,22 @@
 import Layout from './Layout.astro';
 
 interface Props {
-	pageTitle: string;
-  title: string;
-  type: "Interaction" | "Code"
+  frontmatter: {
+    pageTitle: string;
+    title: string;
+    type: "Interaction" | "Code"
+  }
+	
 }
 
-const { pageTitle, type, title } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
-<Layout title={pageTitle}>
+<Layout title={frontmatter.pageTitle}>
   <section class="rules">
     <div class="title">
-      <h1>{title}</h1>
-      <p class="tag">{type}</p>
+      <h1>{frontmatter.title}</h1>
+      <p class="tag">{frontmatter.type}</p>
     </div>
     <slot />
   </section>
