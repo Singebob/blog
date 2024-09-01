@@ -1,6 +1,5 @@
 ---
-import Layout from './Layout.astro';
-
+import Center from './Center.astro';
 interface Props {
   frontmatter: {
     pageTitle: string;
@@ -13,23 +12,17 @@ interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<Layout title={frontmatter.pageTitle}>
-  <section class="rules">
-    <div class="title">
+<Center title={frontmatter.pageTitle}>
+    <section class="title max-w-[50%] pb-12">
       <h1>{frontmatter.title}</h1>
       <p class="tag">{frontmatter.type}</p>
-    </div>
-    <slot />
-  </section>
-</Layout>
+    </section>
+    <section class="max-w-[50%] flex flex-col gap-4 rules">
+      <slot />
+    </section>
+</Center>
 
 <style>
-  section {
-    @apply m-8;
-    @apply flex;
-    @apply flex-col;
-    @apply gap-8;
-  }
   .title {
     @apply flex;
     @apply flex-col;
@@ -63,6 +56,11 @@ const { frontmatter } = Astro.props;
     @apply text-xl;
     @apply font-bold;
     @apply text-blue-400;
+  }
+
+  .rules :global(ul) {
+    @apply list-disc;
+    @apply pl-8;
   }
 
   .rules :global(ul > li) {

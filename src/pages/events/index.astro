@@ -1,11 +1,11 @@
 ---
+import Center from "../../layouts/Center.astro"
 import Layout from "../../layouts/Layout.astro"
 ---
 
-<Layout title="events">
-  <main class="flex flex-col w-6/12 m-auto gap-4">
-    <h1>Events</h1>
-    <a href="/events/shodo13092024">
+<Center title="events">
+  <h1 class="underline decoration-sky-500 underline-offset-8 pb-12">Events</h1>
+  <a href="/events/shodo13092024">
     <section class="section">
       <h3>⛱️ Shodo Summer Code Retreat 2024 ⛩️</h3>
       <div class="border-l-4 flex flex-col gap-2 pl-4">
@@ -16,8 +16,7 @@ import Layout from "../../layouts/Layout.astro"
       </div>
     </section>
   </a>
-  </main>
-</Layout>
+</Center>
 
 <style>
   .section {
