@@ -5,8 +5,7 @@ const rules = await Astro.glob("./*.md")
 ---
 
 <Center title="Règle">
-  <h1 class="underline decoration-sky-500 underline-offset-8">Règle</h1>
-  <section class="flex flex-col gap-4 pt-12">
+  <section class="flex flex-col gap-4">
     {rules.map(rule => (
       <a href={rule.url}><h4>{rule.frontmatter.title}</h4></a>
       <hr />
