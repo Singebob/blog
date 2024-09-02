@@ -12,12 +12,9 @@ interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<Center title={frontmatter.pageTitle}>
-    <section class="title max-w-[50%] pb-12">
-      <h1>{frontmatter.title}</h1>
-      <p class="tag">{frontmatter.type}</p>
-    </section>
-    <section class="max-w-[50%] flex flex-col gap-4 rules">
+<Center pageTitle={frontmatter.pageTitle} title={frontmatter.title}>
+    <p class="tag">{frontmatter.type}</p>
+    <section class="flex flex-col gap-4 rules">
       <slot />
     </section>
 </Center>
