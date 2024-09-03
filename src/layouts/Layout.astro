@@ -20,15 +20,14 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<header class="flex flex-row items-center justify-start px-8 w-full">
-			<div class="flex">
+		<header class="flex flex-row items-center justify-between m-8">
+			<a href="/" class="flex">
 				<Image src={ShodoLyon} alt="Icone Shodo Lyon" height={24} width={24} />
-				<span>Shodo Lyon</span>
-			</div>
-			<nav class="flex flex-row gap-4 border-b-4 border-x-4 border-gray-700">
-				<a href="/">Home</a>
-				<a href="/events">Events</a>
-				<a href="/rules">Règle</a>
+				<span class="font-extrabold">Shodo Lyon</span>
+			</a>
+			<nav class="flex flex-row gap-4 font-bold">
+				<a href="/events" class="page">Events</a>
+				<a href="/rules" class="page">Règle</a>
 			</nav>
 		</header>
 		<slot />
@@ -50,4 +49,10 @@ const { title } = Astro.props;
       @apply text-xl;
       @apply font-bold;
     }
+	
+	.page {
+		@apply no-underline;
+		@apply hover:underline;
+		@apply decoration-sky-500;
+	}
 </style>
