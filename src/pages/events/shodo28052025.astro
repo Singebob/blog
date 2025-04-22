@@ -1,0 +1,102 @@
+---
+import Iterations from "../../components/Iterations.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="⛱️ Shodo Summer Code Retreat 2025 ⛩️">
+    <main class="flex flex-col items-center w-6/12 m-auto gap-4">
+        <h1>⛱️ Shodo Summer Code Retreat 2024 ⛩️</h1>
+        <section class="section">
+            <h3>Agenda</h3>
+            <table class="w-full border-collapse text-start table-auto border">
+                <tr>
+                    <td>🕓 9h-9h30</td>
+                    <td>Accueil & Petit déjeuner</td>
+                </tr>
+                <tr>
+                    <td>🕓 9h30-10h30</td>
+                    <td>Itération 1</td>
+                </tr>
+                <tr>
+                    <td>🕓 10h30-11h30</td>
+                    <td>Itération 2</td>
+                </tr>
+                <tr>
+                    <td>🕓 11h30-12h30</td>
+                    <td>Itération 3</td>
+                </tr>
+                <tr>
+                    <td>🕓 12h30-14h</td>
+                    <td>Miam</td>
+                </tr>
+                <tr>
+                    <td>🕓 14h-15h</td>
+                    <td>Itération 4</td>
+                </tr>
+                <tr>
+                    <td>🕓 15h-16h</td>
+                    <td>Iteration 5</td>
+                </tr>
+                <tr>
+                    <td>🕓 16h-17h</td>
+                    <td>Iteration 6</td>
+                </tr>
+                <tr>
+                    <td>🕓 17h-17h30</td>
+                    <td>Debrief et conclusion de la journée</td>
+                </tr>
+            </table>
+        </section>
+        <section class="section">
+            <h3>Kata</h3>
+            <a href="/kata/mastermind" class="underline decoration-indigo-500 italic">Mastermind</a>
+        </section>
+        <section class="section">
+            <h3>Déroulé de la journée :</h3>
+            <p>À chaque itération :</p>
+            <ul class="list-disc pl-12">
+                <li>Vous devez changer de pair</li>
+                <li>Vous choisissez le langage que vous voulez utiliser</li>
+                <li>Vous appliquez la ou les contraintes de l'itération</li>
+            </ul>
+            <p>A la fin de chaque itération vous devez jeter votre code</p>
+        </section>
+        <section class="section">
+            <h3>Iterations</h3>
+            <Iterations number={1} rules={['TDD', 'Pair-Programming']} />
+            <p>🎯 Objectif : découvrir le kata</p>
+            <Iterations number={2} rules={['No Primitive', 'Strong pair']} />
+            <Iterations number={3} rules={['Code swap', 'Immutable Code', 'Une main']} />
+            <Iterations number={4} rules={['Règle du \"Oui\"', 'No If']} />
+            <Iterations number={5} rules={['Silent Pair', 'Baby Steps']} />
+            <Iterations number={6} rules={['Mob', 'No mouse / Pas de souris']} />
+        </section>
+    </main>
+</Layout>
+
+<style>
+    td {
+        @apply text-start;
+        @apply border-t;
+        @apply p-4;
+    }
+
+    .section {
+        @apply border;
+        @apply rounded-lg;
+        @apply shadow-lg;
+        @apply p-6;
+        @apply flex;
+        @apply flex-col;
+        @apply items-start;
+        @apply gap-4;
+        @apply w-full;
+    }
+
+    h3 {
+        @apply z-20;
+        @apply m-0;
+        @apply text-xl;
+        @apply font-bold;
+    }
+</style>
