@@ -77,20 +77,21 @@ import Layout from "../../layouts/Layout.astro";
 <style>
     td {
         @apply text-start;
-        @apply border-t;
+        @apply border-t border-gray-300 dark:border-gray-700;
         @apply p-4;
     }
 
     .section {
-        @apply border;
+        @apply border border-gray-300 dark:border-gray-700;
         @apply rounded-lg;
-        @apply shadow-lg;
+        @apply shadow-lg dark:shadow-gray-900;
         @apply p-6;
         @apply flex;
         @apply flex-col;
         @apply items-start;
         @apply gap-4;
         @apply w-full;
+        @apply bg-white dark:bg-gray-800;
     }
 
     h3 {
@@ -98,5 +99,6 @@ import Layout from "../../layouts/Layout.astro";
         @apply m-0;
         @apply text-xl;
         @apply font-bold;
+        @apply text-gray-800 dark:text-gray-200;
     }
 </style>

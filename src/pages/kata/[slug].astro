@@ -26,30 +26,30 @@ const { Content } = await render(kata);
 <style>
   main > section:not(:last-child) {
     @apply pb-4;
-    @apply border-b-2;
+    @apply border-b-2 border-gray-300 dark:border-gray-700;
   }
 
   main :global(h2) {
-    @apply text-2xl font-bold mt-8 mb-4 pb-2 border-b-2 border-gray-300;
+    @apply text-2xl font-bold mt-8 mb-4 pb-2 border-b-2 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white;
   }
 
   main :global(h3) {
-    @apply text-xl font-semibold mt-6 mb-3 text-indigo-700;
+    @apply text-xl font-semibold mt-6 mb-3 text-indigo-700 dark:text-indigo-400;
   }
 
   main :global(p) {
-    @apply my-3 leading-relaxed;
+    @apply my-3 leading-relaxed text-gray-700 dark:text-gray-300;
   }
 
   main :global(ul) {
-    @apply my-4 pl-6;
+    @apply my-4 pl-6 text-gray-700 dark:text-gray-300;
   }
 
   main :global(li) {
-    @apply mb-2;
+    @apply mb-2 text-gray-700 dark:text-gray-300;
   }
 
   main :global(img) {
-    @apply my-4 rounded-md shadow-md;
+    @apply my-4 rounded-md shadow-md dark:shadow-gray-800;
   }
 </style>
