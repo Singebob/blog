@@ -7,7 +7,14 @@ const rules = await Astro.glob("./*.md")
 <Center title="Règle">
   <section class="flex flex-col gap-4">
     {rules.map(rule => (
-      <a href={rule.url}><h4>{rule.frontmatter.title}</h4></a>
+      <div>
+        <a href={rule.url} class="flex items-center gap-2">
+          <h4>{rule.frontmatter.title}</h4>
+          <span class={`text-xs px-2 py-1 rounded-full ${rule.frontmatter.type === 'Code' ? 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100' : 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'}`}>
+            {rule.frontmatter.type}
+          </span>
+        </a>
+      </div>
       <hr />
     ))}
   </section>
