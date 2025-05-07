@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from 'astro:content';
+
+const katas = await getCollection('katas');
+---
+
+<Layout title="Katas">
+  <main class="flex flex-col gap-4 w-6/12 m-auto">
+    <h1>Katas</h1>
+    <section class="flex flex-col gap-4">
+      {katas.map(kata => (
+        <div>
+          <a href={`/kata/${kata.id}`}>
+            <h4>{kata.data.title}</h4>
+            <p>{kata.data.description}</p>
+          </a>
+          <hr />
+        </div>
+      ))}
+    </section>
+  </main>
+</Layout>
+
+<style>
+  main > section:not(:last-child) {
+    @apply pb-4;
+    @apply border-b-2;
+  }
+</style>
