@@ -5,17 +5,54 @@ interface Props {
 }
 
 const { rules, number } = Astro.props;
+
+// Function to convert rule name to URL-friendly format
+function getRuleUrl(rule: string): string {
+    // Convert to lowercase and replace spaces with hyphens
+    const urlFriendly = rule.toLowerCase().replace(/\s+/g, '-');
+
+    // Handle special cases
+    const specialCases: Record<string, string> = {
+        'tdd': 'tdd',
+        'pair-programming': 'pair-progamming', // Note the typo in the actual filename
+        'no-if': 'no-if',
+        'ping-pong-pair': 'ping-pong-pair',
+        'code-swap': 'code-swap',
+        'refactoring': 'refactoring',
+        'tell,-don\'t-ask': 'tell-dont-ask',
+        'règle-du-"oui"': 'yes-and',
+        'outside-in-tdd': 'outside-in',
+        'no-primitive': 'no-primitive',
+        'everytding-is-a-function': 'everything-is-function',
+        'strong-pair': 'strong-pair',
+        'mob': 'mob',
+        'tdd-as-if-you-mean-it': 'tdd-as-you-meant-it',
+        'baby-step': 'baby-step'
+    };
+
+    return `/rules/${specialCases[urlFriendly] || urlFriendly}`;
+}
 ---
 
 <h5>Itérations {number}</h5>
 <ul class="list-disc pl-8">
-    {rules.map(rule => (<li>{rule}</li>))}
+    {rules.map(rule => (
+        <li>
+            <a href={getRuleUrl(rule)} class="hover:underline">
+                {rule}
+            </a>
+        </li>
+    ))}
 </ul>
 
 <style>
     h5 {
         @apply text-lg;
         @apply font-semibold;
-        @apply text-gray-800 dark:text-gray-200;
+        @apply text-primary-900 dark:text-primary-200;
+    }
+
+    li > a {
+        @apply text-black dark:text-white;
     }
 </style>
