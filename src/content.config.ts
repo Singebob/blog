@@ -19,7 +19,7 @@ const rules = defineCollection({
   }),
   schema: z.object({
     title: z.string(),
-    pageTitle: z.string().optional(),
+    pageTitle: z.string(),
     type: z.enum(["Interaction", "Code"])
   }),
 });

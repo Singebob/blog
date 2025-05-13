@@ -4,6 +4,7 @@ interface Props {
   frontmatter: {
     pageTitle: string;
     title: string;
+    display_name?: string;
     type: "Interaction" | "Code"
   }
 
@@ -12,7 +13,7 @@ interface Props {
 const { frontmatter } = Astro.props;
 ---
 
-<Center pageTitle={frontmatter.pageTitle} title={frontmatter.title}>
+<Center pageTitle={frontmatter.pageTitle} title={frontmatter.display_name || frontmatter.title}>
     <p class="tag">{frontmatter.type}</p>
     <section class="flex flex-col gap-4 rules">
       <slot />

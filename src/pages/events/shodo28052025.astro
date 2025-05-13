@@ -1,5 +1,5 @@
 ---
-import Iterations, { RULES } from "../../components/Iterations.astro";
+import Iterations from "../../components/Iterations.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
@@ -63,13 +63,13 @@ import Layout from "../../layouts/Layout.astro";
         </section>
         <section class="section">
             <h3>Iterations</h3>
-            <Iterations number={1} rules={['TDD', 'PAIR_PROGRAMMING']} />
+            <Iterations number={1} rules={['tdd', 'pair-programming']} />
             <p>🎯 Objectif : découvrir le kata</p>
-            <Iterations number={2} rules={['NO_PRIMITIVE', 'STRONG_PAIR']} />
-            <Iterations number={3} rules={['CODE_SWAP', 'IMMUTABLE_CODE', 'ONE_HAND']} />
-            <Iterations number={4} rules={['YES_AND', 'NO_IF']} />
-            <Iterations number={5} rules={['SILENT_PAIR', 'BABY_STEP']} />
-            <Iterations number={6} rules={['MOB', 'NO_MOUSE']} />
+            <Iterations number={2} rules={['no-primitive', 'strong-pair']} />
+            <Iterations number={3} rules={['code-swap', 'immutable-code', 'une-main']} />
+            <Iterations number={4} rules={['yes-and', 'no-if']} />
+            <Iterations number={5} rules={['silent-pair', 'baby-step']} />
+            <Iterations number={6} rules={['mob', 'NO_MOUSE']} />
         </section>
     </main>
 </Layout>

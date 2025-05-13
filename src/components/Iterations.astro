@@ -1,107 +1,24 @@
 ---
-// Rule type definition
-export interface RuleInfo {
-    displayName: string;
-    url: string;
-}
-
-// Map of rules with their display names and URLs
-export const RULES = {
-    TDD: {
-        displayName: "TDD",
-        url: "/rules/tdd"
-    },
-    PAIR_PROGRAMMING: {
-        displayName: "Pair Programming",
-        url: "/rules/pair-programming"
-    },
-    NO_IF: {
-        displayName: "No If",
-        url: "/rules/no-if"
-    },
-    PING_PONG_PAIR: {
-        displayName: "Ping Pong Pair",
-        url: "/rules/ping-pong-pair"
-    },
-    CODE_SWAP: {
-        displayName: "Code Swap",
-        url: "/rules/code-swap"
-    },
-    REFACTORING: {
-        displayName: "Refactoring",
-        url: "/rules/refactoring"
-    },
-    TELL_DONT_ASK: {
-        displayName: "Tell, Don't Ask",
-        url: "/rules/tell-dont-ask"
-    },
-    YES_AND: {
-        displayName: "Règle du \"Oui\"",
-        url: "/rules/yes-and"
-    },
-    OUTSIDE_IN: {
-        displayName: "Outside-In TDD",
-        url: "/rules/outside-in"
-    },
-    NO_PRIMITIVE: {
-        displayName: "No Primitive",
-        url: "/rules/no-primitive"
-    },
-    EVERYTHING_IS_FUNCTION: {
-        displayName: "Everything is a Function",
-        url: "/rules/everything-is-function"
-    },
-    STRONG_PAIR: {
-        displayName: "Strong Pair",
-        url: "/rules/strong-pair"
-    },
-    MOB: {
-        displayName: "Mob",
-        url: "/rules/mob"
-    },
-    TDD_AS_YOU_MEANT_IT: {
-        displayName: "TDD as if you mean it",
-        url: "/rules/tdd-as-you-meant-it"
-    },
-    BABY_STEP: {
-        displayName: "Baby Step",
-        url: "/rules/baby-step"
-    },
-    IMMUTABLE_CODE: {
-        displayName: "Immutable Code",
-        url: "/rules/immutable-code"
-    },
-    SILENT_PAIR: {
-        displayName: "Silent Pair",
-        url: "/rules/silent-pair"
-    },
-    ONE_HAND: {
-        displayName: "Une main",
-        url: "/rules/one-hand"
-    },
-    NO_MOUSE: {
-        displayName: "No mouse / Pas de souris",
-        url: "/rules/no-mouse"
-    }
-}
-
-// Export type for rule keys
-export type RuleKey = keyof typeof RULES;
+import { getCollection } from 'astro:content';
 
 interface Props {
-    rules: RuleKey[]
+    rules: string[]
     number: number
 }
-
 const { rules, number } = Astro.props;
+
+const rulesCollection = await getCollection('rules');
+
+const rulesIncluded = rulesCollection.filter(rule => rules.includes(rule.id))
+
 ---
 
 <h5>Itérations {number}</h5>
 <ul class="list-disc pl-8">
-    {rules.map(rule => (
+    {rulesIncluded.map(rule => (
         <li>
-            <a href={RULES[rule].url} class="hover:underline">
-                {RULES[rule].displayName}
+            <a href={`/rules/${rule.id}`} class="hover:underline">
+                {rule.data.pageTitle}
             </a>
         </li>
     ))}
