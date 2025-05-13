@@ -23,7 +23,6 @@ L'objectif de cette contrainte est de découper au mieux votre développement, p
 > Si le timer de 2 minutes est trop difficile, commencez à 3,4 ou 5 minutes, et diminuez votre timer au fur et à mesure de vos réussites.
 
 ### 🔗 Ressources
-- (blog.adrianbolboaca.ro/2013/03/taking-baby-steps)[https://blog.adrianbolboaca.ro/2013/03/taking-baby-steps/]
-- (blog.adrianbolboaca.ro/2013/01/the-history-of-taking-baby-steps)[https://blog.adrianbolboaca.ro/2013/01/the-history-of-taking-baby-steps/]
-- (kata-log.rocks/baby-steps)[https://kata-log.rocks/baby-steps]
-
+- [blog.adrianbolboaca.ro/2013/03/taking-baby-steps](https://blog.adrianbolboaca.ro/2013/03/taking-baby-steps/)
+- [blog.adrianbolboaca.ro/2013/01/the-history-of-taking-baby-steps](https://blog.adrianbolboaca.ro/2013/01/the-history-of-taking-baby-steps/)
+- [kata-log.rocks/baby-steps](https://kata-log.rocks/baby-steps)
