@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Code Swap'
 pageTitle: 'Code Swap'
 type: 'Code'

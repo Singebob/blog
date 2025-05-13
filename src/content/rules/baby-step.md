@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Baby Steps'
 pageTitle: 'Baby Steps'
 type: 'Code'

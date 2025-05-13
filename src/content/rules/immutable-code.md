@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Immutable Code / Code Immuable'
 pageTitle: 'Immutable Code'
 type: 'Code'

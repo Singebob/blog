@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Refactoring'
 pageTitle: 'Refactoring'
 type: 'Code'

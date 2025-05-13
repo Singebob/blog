@@ -1,0 +1,85 @@
+---
+import Center from "../../layouts/Center.astro";
+import {getCollection, render} from 'astro:content';
+
+export async function getStaticPaths() {
+  const rules = await getCollection('rules');
+  return rules.map(rule => ({
+    params: { slug: rule.id },
+    props: { rule },
+  }));
+}
+
+const { rule } = Astro.props;
+const { Content } = await render(rule);
+---
+
+<Center pageTitle={rule.data.pageTitle} title={rule.data.title}>
+  <p class="tag">{rule.data.type}</p>
+  <section class="flex flex-col gap-4 rules">
+    <Content />
+  </section>
+</Center>
+
+<style>
+  .title {
+    @apply flex;
+    @apply flex-col;
+    @apply gap-2;
+  }
+
+  .tag {
+    @apply w-min;
+    @apply h-min;
+    @apply bg-blue-100 dark:bg-blue-900;
+    @apply text-blue-800 dark:text-blue-200;
+    @apply text-xs;
+    @apply font-medium;
+    @apply me-2;
+    @apply px-2.5;
+    @apply py-0.5;
+    @apply rounded;
+    @apply border;
+    @apply border-blue-400 dark:border-blue-700;
+  }
+
+  .rules :global(h2) {
+    @apply m-0;
+    @apply text-4xl;
+    @apply font-bold;
+    @apply text-blue-500 dark:text-blue-400;
+  }
+
+  .rules :global(h5) {
+    @apply m-0;
+    @apply text-xl;
+    @apply font-bold;
+    @apply text-blue-400 dark:text-blue-300;
+  }
+
+  .rules :global(ul) {
+    @apply list-disc;
+    @apply pl-8;
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .rules :global(ul > li) {
+    @apply mb-4;
+  }
+
+  .rules :global(p) {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .rules :global(blockquote) {
+    @apply border-l-4 border-gray-300 dark:border-gray-700;
+    @apply pl-4;
+    @apply italic;
+    @apply text-gray-600 dark:text-gray-400;
+  }
+
+  .rules :global(a) {
+    @apply text-blue-600 dark:text-blue-400;
+    @apply hover:underline;
+  }
+</style>

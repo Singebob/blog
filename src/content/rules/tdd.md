@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Test Driven Development (TDD)'
 pageTitle: 'TDD'
 type: 'Code'

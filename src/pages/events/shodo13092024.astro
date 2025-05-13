@@ -1,5 +1,5 @@
 ---
-import Iterations from "../../components/Iterations.astro";
+import Iterations, { RULES } from "../../components/Iterations.astro";
 import Layout from "../../layouts/Layout.astro";
 ---
 
@@ -63,13 +63,13 @@ import Layout from "../../layouts/Layout.astro";
         </section>
         <section class="section">
             <h3>Iterations</h3>
-            <Iterations number={1} rules={['TDD', 'Pair-Programming']} />
+            <Iterations number={1} rules={['TDD', 'PAIR_PROGRAMMING']} />
             <p>🎯 Objectif : découvrir le kata</p>
-            <Iterations number={2} rules={['No-If', 'Ping pong pair']} />
-            <Iterations number={3} rules={['Code Swap', 'Refactoring', "Tell, Don't Ask"]} />
-            <Iterations number={4} rules={['Règle du \"Oui\"', 'Outside-In TDD']} />
-            <Iterations number={5} rules={['No Primitive', 'Everytding is a function', 'Strong Pair']} />
-            <Iterations number={6} rules={['Mob', 'TDD As If You Mean It']} />
+            <Iterations number={2} rules={['NO_IF', 'PING_PONG_PAIR']} />
+            <Iterations number={3} rules={['CODE_SWAP', 'REFACTORING', 'TELL_DONT_ASK']} />
+            <Iterations number={4} rules={['YES_AND', 'OUTSIDE_IN']} />
+            <Iterations number={5} rules={['NO_PRIMITIVE', 'EVERYTHING_IS_FUNCTION', 'STRONG_PAIR']} />
+            <Iterations number={6} rules={['MOB', 'TDD_AS_YOU_MEANT_IT']} />
         </section>
     </main>
 </Layout>

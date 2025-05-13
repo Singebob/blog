@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Strong Pair Programming'
 pageTitle: 'Strong Pair programming'
 type: 'Interaction'

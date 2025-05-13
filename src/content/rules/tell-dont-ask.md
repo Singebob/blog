@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: "Tell, don't ask"
 pageTitle: 'Tell Dont Ask'
 type: 'Code'

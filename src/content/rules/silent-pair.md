@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Silent Pair'
 pageTitle: 'Silent Pair'
 type: 'Interaction'

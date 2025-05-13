@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Everything is a Function'
 pageTitle: 'Everything is a function'
 type: 'Code'

@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Outside In TDD'
 pageTitle: 'Outside In'
 type: 'Code'

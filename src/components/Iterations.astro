@@ -1,46 +1,107 @@
 ---
+// Rule type definition
+export interface RuleInfo {
+    displayName: string;
+    url: string;
+}
+
+// Map of rules with their display names and URLs
+export const RULES = {
+    TDD: {
+        displayName: "TDD",
+        url: "/rules/tdd"
+    },
+    PAIR_PROGRAMMING: {
+        displayName: "Pair Programming",
+        url: "/rules/pair-programming"
+    },
+    NO_IF: {
+        displayName: "No If",
+        url: "/rules/no-if"
+    },
+    PING_PONG_PAIR: {
+        displayName: "Ping Pong Pair",
+        url: "/rules/ping-pong-pair"
+    },
+    CODE_SWAP: {
+        displayName: "Code Swap",
+        url: "/rules/code-swap"
+    },
+    REFACTORING: {
+        displayName: "Refactoring",
+        url: "/rules/refactoring"
+    },
+    TELL_DONT_ASK: {
+        displayName: "Tell, Don't Ask",
+        url: "/rules/tell-dont-ask"
+    },
+    YES_AND: {
+        displayName: "Règle du \"Oui\"",
+        url: "/rules/yes-and"
+    },
+    OUTSIDE_IN: {
+        displayName: "Outside-In TDD",
+        url: "/rules/outside-in"
+    },
+    NO_PRIMITIVE: {
+        displayName: "No Primitive",
+        url: "/rules/no-primitive"
+    },
+    EVERYTHING_IS_FUNCTION: {
+        displayName: "Everything is a Function",
+        url: "/rules/everything-is-function"
+    },
+    STRONG_PAIR: {
+        displayName: "Strong Pair",
+        url: "/rules/strong-pair"
+    },
+    MOB: {
+        displayName: "Mob",
+        url: "/rules/mob"
+    },
+    TDD_AS_YOU_MEANT_IT: {
+        displayName: "TDD as if you mean it",
+        url: "/rules/tdd-as-you-meant-it"
+    },
+    BABY_STEP: {
+        displayName: "Baby Step",
+        url: "/rules/baby-step"
+    },
+    IMMUTABLE_CODE: {
+        displayName: "Immutable Code",
+        url: "/rules/immutable-code"
+    },
+    SILENT_PAIR: {
+        displayName: "Silent Pair",
+        url: "/rules/silent-pair"
+    },
+    ONE_HAND: {
+        displayName: "Une main",
+        url: "/rules/one-hand"
+    },
+    NO_MOUSE: {
+        displayName: "No mouse / Pas de souris",
+        url: "/rules/no-mouse"
+    }
+}
+
+// Export type for rule keys
+export type RuleKey = keyof typeof RULES;
+
 interface Props {
-	rules: string[]
+    rules: RuleKey[]
     number: number
 }
 
 const { rules, number } = Astro.props;
-
-// Function to convert rule name to URL-friendly format
-function getRuleUrl(rule: string): string {
-    // Convert to lowercase and replace spaces with hyphens
-    const urlFriendly = rule.toLowerCase().replace(/\s+/g, '-');
-
-    // Handle special cases
-    const specialCases: Record<string, string> = {
-        'tdd': 'tdd',
-        'pair-programming': 'pair-programming',
-        'no-if': 'no-if',
-        'ping-pong-pair': 'ping-pong-pair',
-        'code-swap': 'code-swap',
-        'refactoring': 'refactoring',
-        'tell,-don\'t-ask': 'tell-dont-ask',
-        'règle-du-"oui"': 'yes-and',
-        'outside-in-tdd': 'outside-in',
-        'no-primitive': 'no-primitive',
-        'everytding-is-a-function': 'everything-is-function',
-        'strong-pair': 'strong-pair',
-        'mob': 'mob',
-        'tdd-as-if-you-mean-it': 'tdd-as-you-meant-it',
-        'baby-step': 'baby-step',
-        'immutable-code': 'immutable-code'
-    };
-
-    return `/rules/${specialCases[urlFriendly] || urlFriendly}`;
-}
 ---
 
 <h5>Itérations {number}</h5>
 <ul class="list-disc pl-8">
     {rules.map(rule => (
         <li>
-            <a href={getRuleUrl(rule)} class="hover:underline">
-                {rule}
+            <a href={RULES[rule].url} class="hover:underline">
+                {RULES[rule].displayName}
             </a>
         </li>
     ))}

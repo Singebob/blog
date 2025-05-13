@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Une main'
 pageTitle: 'Une main'
 type: 'Interaction'

@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Mob Programming (aka. Team-Programming, Ensemble-Programming)'
 pageTitle: 'Mob'
 type: 'Interaction'

@@ -12,6 +12,19 @@ const katas = defineCollection({
   }),
 });
 
+const rules = defineCollection({
+  loader: glob({
+    pattern: ["*.md"],
+    base: "./src/content/rules",
+  }),
+  schema: z.object({
+    title: z.string(),
+    pageTitle: z.string().optional(),
+    type: z.string(),
+  }),
+});
+
 export const collections = {
   katas,
+  rules,
 };

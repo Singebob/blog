@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'TDD As You Meant It'
 pageTitle: 'TDD As You Meant It'
 type: 'Code'

@@ -1,17 +1,18 @@
 ---
 import Center from "../../layouts/Center.astro"
+import { getCollection } from 'astro:content';
 
-const rules = await Astro.glob("./*.md")
+const rules = await getCollection('rules');
 ---
 
 <Center title="Règle">
   <section class="flex flex-col gap-4">
     {rules.map(rule => (
       <div>
-        <a href={rule.url} class="flex items-center gap-2">
-          <h4>{rule.frontmatter.title}</h4>
-          <span class={`text-xs px-2 py-1 rounded-full ${rule.frontmatter.type === 'Code' ? 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100' : 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'}`}>
-            {rule.frontmatter.type}
+        <a href={`/rules/${rule.id}`} class="flex items-center gap-2">
+          <h4>{rule.data.title}</h4>
+          <span class={`text-xs px-2 py-1 rounded-full ${rule.data.type === 'Code' ? 'bg-blue-100 text-blue-800 dark:bg-blue-800 dark:text-blue-100' : 'bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-100'}`}>
+            {rule.data.type}
           </span>
         </a>
       </div>

@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Ping Pong Pair Programming'
 pageTitle: 'Ping Pong Pair programming'
 type: 'Interaction'

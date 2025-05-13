@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'No-if / Pas de if'
 pageTitle: 'No-if'
 type: 'Code'

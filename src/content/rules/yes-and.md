@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'Yes And... Rule / Règle du Oui'
 pageTitle: 'Yes and...'
 type: 'Interaction'

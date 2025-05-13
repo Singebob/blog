@@ -1,5 +1,4 @@
 ---
-layout: '../../layouts/Rules.astro'
 title: 'No Primitives / Pas de primitive'
 pageTitle: 'No Primitives'
 type: 'Code'
