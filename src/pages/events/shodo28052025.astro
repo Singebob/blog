@@ -49,7 +49,7 @@ import Layout from "../../layouts/Layout.astro";
         </section>
         <section class="section">
             <h3>Kata</h3>
-            <a href="/kata/mastermind" class="underline decoration-indigo-500 italic">Mastermind</a>
+            <a href="/kata/mastermind" class="underline decoration-shodo-accent italic">Mastermind</a>
         </section>
         <section class="section">
             <h3>Déroulé de la journée :</h3>
@@ -77,21 +77,21 @@ import Layout from "../../layouts/Layout.astro";
 <style>
     td {
         @apply text-start;
-        @apply border-t border-gray-300 dark:border-gray-700;
+        @apply border-t border-primary-200 dark:border-primary-800;
         @apply p-4;
     }
 
     .section {
-        @apply border border-gray-300 dark:border-gray-700;
+        @apply border border-primary-200 dark:border-primary-800;
         @apply rounded-lg;
-        @apply shadow-lg dark:shadow-gray-900;
+        @apply shadow-lg dark:shadow-primary-900;
         @apply p-6;
         @apply flex;
         @apply flex-col;
         @apply items-start;
         @apply gap-4;
         @apply w-full;
-        @apply bg-white dark:bg-gray-800;
+        @apply bg-shodo-light dark:bg-shodo-dark/80;
     }
 
     h3 {
@@ -99,6 +99,6 @@ import Layout from "../../layouts/Layout.astro";
         @apply m-0;
         @apply text-xl;
         @apply font-bold;
-        @apply text-gray-800 dark:text-gray-200;
+        @apply text-shodo-dark dark:text-shodo-light;
     }
 </style>
