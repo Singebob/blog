@@ -18,7 +18,7 @@ const rulesIncluded = rulesCollection.filter(rule => rules.includes(rule.id))
     {rulesIncluded.map(rule => (
         <li>
             <a href={`/rules/${rule.id}`} class="hover:underline">
-                {rule.data.pageTitle}
+                {rule.data.title}
             </a>
         </li>
     ))}
