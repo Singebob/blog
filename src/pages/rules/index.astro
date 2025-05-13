@@ -6,7 +6,6 @@ const rules = await getCollection('rules');
 ---
 
 <Center title="Règle">
-  <section class="flex flex-col gap-4">
     {rules.map(rule => (
       <div>
         <a href={`/rules/${rule.id}`} class="flex items-center gap-2">
@@ -18,5 +17,4 @@ const rules = await getCollection('rules');
       </div>
       <hr />
     ))}
-  </section>
 </Center>
